@@ -1,3 +1,4 @@
+/*
 const products=[{
     image:'images/products/athletic-cotton-socks-6-pairs.jpg',
     name:'  Black and Gray Athletic Cotton Socks - 6 Pairs',
@@ -34,6 +35,7 @@ priceCents:2095
     priceCents:1899
 }
 ];
+*/
 
 let productsHTML='';
 
