@@ -120,6 +120,13 @@ document.querySelectorAll('.js-add-to-cart').forEach((button)=>{
       }
     );
     }
+
+    let totalItems=0;
+    cart.forEach((item)=>{
+      totalItems=totalItems+item.quantity;
+    })
+    console.log(totalItems);
+    document.querySelector('.cart-quantity').innerHTML=totalItems;
     console.log(cart);
   });
-});
+}); 
