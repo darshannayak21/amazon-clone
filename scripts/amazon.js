@@ -1,3 +1,5 @@
+import {cart} from '../data/cart.js';
+
 /*
 const products=[{
     image:'images/products/athletic-cotton-socks-6-pairs.jpg',
@@ -101,18 +103,16 @@ document.querySelector('.products-grid').innerHTML=productsHTML;
 document.querySelectorAll('.js-add-to-cart').forEach((button)=>{
   button.addEventListener('click',()=>{
     const productId=button.dataset.productId;
-    let matchingitem;
+    let matchingitem=false;
     cart.forEach((item)=>{
       if(productId===item.productId)
       {
-        matchingitem=item;
+        item.quantity=item.quantity+1;
+        matchingitem=true;
+
       }
     });
-    if(matchingitem)
-    {
-      matchingitem.quantity=matchingitem.quantity+1;
-    }
-    else
+    if (matchingitem===false)
     { 
       cart.push({ 
       productId :productId,
