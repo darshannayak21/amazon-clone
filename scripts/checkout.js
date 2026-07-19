@@ -1,9 +1,10 @@
-import{cart} from '. ./data/cart.js';
-import{products} from '. ./data/products.js';
+import{cart} from '../data/cart.js';
+import{products} from '../data/products.js';
 
+let cartHTML='';
 cart.forEach((cartItem)=>{
 
-    productId=cartItem.productId;
+    const productId=cartItem.productId;
     let matchingItem;
     products.forEach((product)=>{
         if(product.id===productId)
@@ -26,7 +27,7 @@ cart.forEach((cartItem)=>{
                   ${matchingItem.name}
                 </div>
                 <div class="product-price">
-                  $${matchingItem.price.toFixed(2)}
+                  $${matchingItem.priceCents / 100}
                 </div>
                 <div class="product-quantity">
                   <span>
@@ -90,3 +91,6 @@ cart.forEach((cartItem)=>{
         `;
 
 })
+console.log(cartHTML);
+const   checkoutcart=document.querySelector('.js-order-summary');
+checkoutcart.innerHTML=cartHTML;
