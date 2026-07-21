@@ -37,7 +37,7 @@ cart.forEach((cartItem)=>{
                     Update
                   </span>
                   <span class="delete-quantity-link link-primary">
-                    Delete
+                    Dele
                   </span>
                 </div>
               </div>
