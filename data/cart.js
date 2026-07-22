@@ -28,7 +28,7 @@ export function addingtocart(productId)
     console.log(cart);
   }
 
-  function removingfromcart(productId)
+  export function removingfromcart(productId)
   {
     const newCart=[];
     cart.forEach((item)=>{
@@ -37,6 +37,6 @@ export function addingtocart(productId)
         newCart.push(item);
       }
 
-    })
+    });
     cart=newCart;
   }
